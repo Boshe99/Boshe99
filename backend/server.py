@@ -165,7 +165,7 @@ async def create_payout(request: CreatePayoutRequest, authorization: str = Heade
             "arrival_date": payout.arrival_date,
             "description": payout.description,
         }
-    except stripe.error.InvalidRequestError as e:
+    except stripe.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
@@ -183,7 +183,7 @@ async def cancel_payout(payout_id: str, authorization: str = Header(None)):
         payout.cancel()
         
         return {"message": "Payout cancelled successfully", "payout_id": payout_id}
-    except stripe.error.InvalidRequestError as e:
+    except stripe.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
@@ -260,7 +260,7 @@ async def add_bank_account(request: AddBankAccountRequest, authorization: str = 
             "last4": bank_account.last4,
             "status": bank_account.status,
         }
-    except stripe.error.InvalidRequestError as e:
+    except stripe.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
@@ -281,7 +281,7 @@ async def delete_bank_account(bank_account_id: str, authorization: str = Header(
         )
         
         return {"message": "Bank account deleted successfully", "bank_account_id": bank_account_id}
-    except stripe.error.InvalidRequestError as e:
+    except stripe.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
@@ -303,7 +303,7 @@ async def set_default_bank_account(bank_account_id: str, authorization: str = He
         )
         
         return {"message": "Default bank account set successfully", "bank_account_id": bank_account_id}
-    except stripe.error.InvalidRequestError as e:
+    except stripe.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
@@ -340,7 +340,7 @@ async def update_profile(request: UpdateProfileRequest, authorization: str = Hea
             "message": "Profile updated successfully",
             "business_profile": updated_account.business_profile,
         }
-    except stripe.error.InvalidRequestError as e:
+    except stripe.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
