@@ -99,11 +99,11 @@ async def get_account(authorization: str = Header(None)):
         return {
             "id": account.id,
             "type": account.type,
-            "email": account.email,
-            "business_profile": account.business_profile,
+            "email": account.email if account.email else None,
+            "business_profile": dict(account.business_profile) if account.business_profile else {},
             "charges_enabled": account.charges_enabled,
             "payouts_enabled": account.payouts_enabled,
-            "requirements": account.requirements,
+            "requirements": dict(account.requirements) if account.requirements else {},
             "country": account.country,
             "default_currency": account.default_currency,
         }
