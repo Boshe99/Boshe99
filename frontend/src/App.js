@@ -23,6 +23,7 @@ const Home = () => {
   const [account, setAccount] = useState(null);
   const [payouts, setPayouts] = useState([]);
   const [bankAccounts, setBankAccounts] = useState([]);
+  const [darkMode, setDarkMode] = useState(localStorage.getItem('darkMode') === 'true');
   
   // Payout form
   const [payoutAmount, setPayoutAmount] = useState('');
