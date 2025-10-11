@@ -107,7 +107,7 @@ async def get_account(authorization: str = Header(None)):
             "country": account.country,
             "default_currency": account.default_currency,
         }
-    except stripe.error.AuthenticationError:
+    except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -136,7 +136,7 @@ async def get_payouts(authorization: str = Header(None), limit: int = 10):
                 for payout in payouts.data
             ]
         }
-    except stripe.error.AuthenticationError:
+    except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -167,7 +167,7 @@ async def create_payout(request: CreatePayoutRequest, authorization: str = Heade
         }
     except stripe.error.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    except stripe.error.AuthenticationError:
+    except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -185,7 +185,7 @@ async def cancel_payout(payout_id: str, authorization: str = Header(None)):
         return {"message": "Payout cancelled successfully", "payout_id": payout_id}
     except stripe.error.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    except stripe.error.AuthenticationError:
+    except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -222,7 +222,7 @@ async def get_bank_accounts(authorization: str = Header(None)):
                 for ba in external_accounts.data
             ]
         }
-    except stripe.error.AuthenticationError:
+    except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -262,7 +262,7 @@ async def add_bank_account(request: AddBankAccountRequest, authorization: str = 
         }
     except stripe.error.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    except stripe.error.AuthenticationError:
+    except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -283,7 +283,7 @@ async def delete_bank_account(bank_account_id: str, authorization: str = Header(
         return {"message": "Bank account deleted successfully", "bank_account_id": bank_account_id}
     except stripe.error.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    except stripe.error.AuthenticationError:
+    except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -305,7 +305,7 @@ async def set_default_bank_account(bank_account_id: str, authorization: str = He
         return {"message": "Default bank account set successfully", "bank_account_id": bank_account_id}
     except stripe.error.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    except stripe.error.AuthenticationError:
+    except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -342,7 +342,7 @@ async def update_profile(request: UpdateProfileRequest, authorization: str = Hea
         }
     except stripe.error.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    except stripe.error.AuthenticationError:
+    except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
