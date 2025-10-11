@@ -331,6 +331,17 @@ async def update_profile(request: UpdateProfileRequest, authorization: str = Hea
         api_key = get_stripe_key(authorization)
         stripe.api_key = api_key
         
+        account = stripe.Account.retrieve()
+        
+        # Check if this is a standard account (own account)
+        # Standard accounts cannot modify their own business profile via API
+        # They must use the Stripe Dashboard
+        if account.type == "standard":
+            raise HTTPException(
+                status_code=403, 
+                detail="Standard Stripe accounts must update business profile through the Stripe Dashboard at https://dashboard.stripe.com/settings/business"
+            )
+        
         update_data = {}
         business_profile = {}
         
@@ -346,8 +357,8 @@ async def update_profile(request: UpdateProfileRequest, authorization: str = Hea
         if business_profile:
             update_data["business_profile"] = business_profile
         
-        # Use Account.modify without account ID for own account
-        updated_account = stripe.Account.modify(**update_data)
+        # This will only work for Connect accounts
+        updated_account = stripe.Account.modify(account.id, **update_data)
         
         return {
             "message": "Profile updated successfully",
