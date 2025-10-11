@@ -322,8 +322,6 @@ async def update_profile(request: UpdateProfileRequest, authorization: str = Hea
         api_key = get_stripe_key(authorization)
         stripe.api_key = api_key
         
-        account = stripe.Account.retrieve()
-        
         update_data = {}
         business_profile = {}
         
@@ -339,11 +337,12 @@ async def update_profile(request: UpdateProfileRequest, authorization: str = Hea
         if business_profile:
             update_data["business_profile"] = business_profile
         
-        updated_account = stripe.Account.modify(account.id, **update_data)
+        # Use Account.modify without account ID for own account
+        updated_account = stripe.Account.modify(**update_data)
         
         return {
             "message": "Profile updated successfully",
-            "business_profile": updated_account.business_profile,
+            "business_profile": dict(updated_account.business_profile) if updated_account.business_profile else {},
         }
     except stripe.InvalidRequestError as e:
         raise HTTPException(status_code=400, detail=str(e))
