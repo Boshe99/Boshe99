@@ -203,30 +203,39 @@ async def get_bank_accounts(authorization: str = Header(None)):
         stripe.api_key = api_key
         
         account = stripe.Account.retrieve()
-        external_accounts = stripe.Account.list_external_accounts(
-            account.id,
-            object="bank_account",
-            limit=10
-        )
         
-        return {
-            "data": [
-                {
-                    "id": ba.id,
-                    "object": ba.object,
-                    "account_holder_name": ba.account_holder_name,
-                    "account_holder_type": ba.account_holder_type,
-                    "bank_name": ba.bank_name,
-                    "country": ba.country,
-                    "currency": ba.currency,
-                    "last4": ba.last4,
-                    "routing_number": ba.routing_number,
-                    "status": ba.status,
-                    "default_for_currency": ba.default_for_currency,
-                }
-                for ba in external_accounts.data
-            ]
-        }
+        try:
+            # Try to get external accounts - this may fail for standard accounts
+            external_accounts = stripe.Account.list_external_accounts(
+                account.id,
+                object="bank_account",
+                limit=10
+            )
+            
+            return {
+                "data": [
+                    {
+                        "id": ba.id,
+                        "object": ba.object,
+                        "account_holder_name": getattr(ba, 'account_holder_name', None),
+                        "account_holder_type": getattr(ba, 'account_holder_type', None),
+                        "bank_name": getattr(ba, 'bank_name', None),
+                        "country": ba.country,
+                        "currency": ba.currency,
+                        "last4": ba.last4,
+                        "routing_number": getattr(ba, 'routing_number', None),
+                        "status": ba.status,
+                        "default_for_currency": getattr(ba, 'default_for_currency', False),
+                    }
+                    for ba in external_accounts.data
+                ]
+            }
+        except stripe.PermissionError:
+            # If permissions issue, return empty list with message
+            return {
+                "data": [],
+                "message": "Bank account management requires additional permissions. Please use the Stripe Dashboard."
+            }
     except stripe.AuthenticationError:
         raise HTTPException(status_code=401, detail="Invalid API key")
     except Exception as e:
