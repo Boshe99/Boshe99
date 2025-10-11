@@ -42,6 +42,19 @@ const Home = () => {
   const [supportPhone, setSupportPhone] = useState('');
   const [supportEmail, setSupportEmail] = useState('');
 
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('darkMode', darkMode);
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   const axiosConfig = {
     headers: {
       'Authorization': `Bearer ${apiKey}`
@@ -236,24 +249,51 @@ const Home = () => {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex items-center justify-center p-4">
-        <Card className="w-full max-w-md shadow-2xl border-0">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-black dark:to-gray-900 flex items-center justify-center p-4 transition-colors duration-300">
+        <Card className="w-full max-w-md shadow-2xl border-0 dark:bg-gray-800 dark:border-gray-700">
           <CardHeader className="space-y-3">
+            <div className="flex justify-end">
+              <button
+                onClick={toggleDarkMode}
+                className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                aria-label="Toggle dark mode"
+              >
+                {darkMode ? (
+                  <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                  </svg>
+                )}
+              </button>
+            </div>
             <div className="flex justify-center mb-4">
-              <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg">
-                <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                </svg>
+              <div className="relative">
+                <div className="h-20 w-20 rounded-full bg-gradient-to-br from-gray-900 via-gray-800 to-black dark:from-gray-700 dark:via-gray-600 dark:to-gray-800 flex items-center justify-center shadow-2xl border-2 border-yellow-400">
+                  <svg className="h-10 w-10 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div className="absolute -bottom-1 -right-1 h-6 w-6 rounded-full bg-yellow-400 border-2 border-white dark:border-gray-800 flex items-center justify-center">
+                  <svg className="h-3 w-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
               </div>
             </div>
-            <CardTitle className="text-2xl text-center">Stripe Connect Dashboard</CardTitle>
-            <CardDescription className="text-center">
-              Enter your Stripe API key to manage payouts, bank accounts, and profile
+            <CardTitle className="text-3xl text-center font-black tracking-tight dark:text-white">
+              <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">BLACK MAMBA</span>
+            </CardTitle>
+            <p className="text-center text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wider">Stripe Management System</p>
+            <CardDescription className="text-center dark:text-gray-400">
+              Enter your Stripe API key to access the dashboard
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="apiKey">Stripe API Key</Label>
+              <Label htmlFor="apiKey" className="dark:text-gray-300">Stripe API Key</Label>
               <Input
                 id="apiKey"
                 type="password"
@@ -262,18 +302,19 @@ const Home = () => {
                 onChange={(e) => setApiKey(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleLogin()}
                 data-testid="api-key-input"
+                className="dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
               />
             </div>
             <Button 
               onClick={handleLogin} 
               disabled={loading} 
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+              className="w-full bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:via-yellow-700 hover:to-yellow-800 text-black font-bold shadow-lg"
               data-testid="login-button"
             >
-              {loading ? 'Connecting...' : 'Connect to Stripe'}
+              {loading ? 'Connecting...' : 'Sign In'}
             </Button>
-            <p className="text-xs text-center text-gray-500 mt-4">
-              Your API key is stored locally and never sent to our servers
+            <p className="text-xs text-center text-gray-500 dark:text-gray-400 mt-4">
+              🔒 Your API key is stored locally and never sent to our servers
             </p>
           </CardContent>
         </Card>
@@ -282,53 +323,78 @@ const Home = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-black dark:to-gray-900 transition-colors duration-300">
       <div className="container mx-auto p-6 max-w-7xl">
         {/* Header */}
         <div className="mb-8">
           <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Stripe Connect Dashboard
-              </h1>
-              <p className="text-gray-600 mt-2">Manage your payouts, bank accounts, and business profile</p>
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-full bg-gradient-to-br from-gray-900 via-gray-800 to-black dark:from-gray-700 dark:via-gray-600 dark:to-gray-800 flex items-center justify-center shadow-lg border-2 border-yellow-400">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="text-4xl font-black tracking-tight">
+                  <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">BLACK MAMBA</span>
+                </h1>
+                <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">Stripe Management Dashboard</p>
+              </div>
             </div>
-            <Button 
-              onClick={handleLogout} 
-              variant="outline"
-              data-testid="logout-button"
-            >
-              Logout
-            </Button>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={toggleDarkMode}
+                className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+                aria-label="Toggle dark mode"
+              >
+                {darkMode ? (
+                  <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                  </svg>
+                )}
+              </button>
+              <Button 
+                onClick={handleLogout} 
+                variant="outline"
+                data-testid="logout-button"
+                className="dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+              >
+                Logout
+              </Button>
+            </div>
           </div>
         </div>
 
         {/* Account Overview */}
         {account && (
-          <Card className="mb-6 shadow-lg border-0" data-testid="account-overview">
+          <Card className="mb-6 shadow-lg border-0 dark:bg-gray-800 dark:border-gray-700" data-testid="account-overview">
             <CardHeader>
-              <CardTitle>Account Overview</CardTitle>
+              <CardTitle className="dark:text-white">Account Overview</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                  <p className="text-sm text-gray-500">Account ID</p>
-                  <p className="font-semibold" data-testid="account-id">{account.id}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Account ID</p>
+                  <p className="font-semibold dark:text-white" data-testid="account-id">{account.id}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Email</p>
-                  <p className="font-semibold" data-testid="account-email">{account.email || 'Not set'}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                  <p className="font-semibold dark:text-white" data-testid="account-email">{account.email || 'Not set'}</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Status</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Status</p>
                   <div className="flex gap-2 mt-1">
                     {account.charges_enabled ? (
-                      <Badge className="bg-green-100 text-green-800">Charges Enabled</Badge>
+                      <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Charges Enabled</Badge>
                     ) : (
                       <Badge variant="destructive">Charges Disabled</Badge>
                     )}
                     {account.payouts_enabled ? (
-                      <Badge className="bg-green-100 text-green-800">Payouts Enabled</Badge>
+                      <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Payouts Enabled</Badge>
                     ) : (
                       <Badge variant="destructive">Payouts Disabled</Badge>
                     )}
@@ -341,23 +407,23 @@ const Home = () => {
 
         {/* Main Content */}
         <Tabs defaultValue="payouts" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3 lg:w-auto">
-            <TabsTrigger value="payouts" data-testid="payouts-tab">Payouts</TabsTrigger>
-            <TabsTrigger value="bank-accounts" data-testid="bank-accounts-tab">Bank Accounts</TabsTrigger>
-            <TabsTrigger value="profile" data-testid="profile-tab">Profile</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 lg:w-auto dark:bg-gray-800 dark:border-gray-700">
+            <TabsTrigger value="payouts" data-testid="payouts-tab" className="dark:text-gray-300 dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-yellow-400">Payouts</TabsTrigger>
+            <TabsTrigger value="bank-accounts" data-testid="bank-accounts-tab" className="dark:text-gray-300 dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-yellow-400">Bank Accounts</TabsTrigger>
+            <TabsTrigger value="profile" data-testid="profile-tab" className="dark:text-gray-300 dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-yellow-400">Profile</TabsTrigger>
           </TabsList>
 
           {/* Payouts Tab */}
           <TabsContent value="payouts" className="space-y-6">
-            <Card className="shadow-lg border-0">
+            <Card className="shadow-lg border-0 dark:bg-gray-800 dark:border-gray-700">
               <CardHeader>
-                <CardTitle>Create Payout</CardTitle>
-                <CardDescription>Schedule a new payout to your bank account</CardDescription>
+                <CardTitle className="dark:text-white">Create Payout</CardTitle>
+                <CardDescription className="dark:text-gray-400">Schedule a new payout to your bank account</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="payoutAmount">Amount</Label>
+                    <Label htmlFor="payoutAmount" className="dark:text-gray-300">Amount</Label>
                     <Input
                       id="payoutAmount"
                       type="number"
@@ -366,33 +432,36 @@ const Home = () => {
                       value={payoutAmount}
                       onChange={(e) => setPayoutAmount(e.target.value)}
                       data-testid="payout-amount-input"
+                      className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="payoutCurrency">Currency</Label>
+                    <Label htmlFor="payoutCurrency" className="dark:text-gray-300">Currency</Label>
                     <Input
                       id="payoutCurrency"
                       type="text"
                       value={payoutCurrency}
                       onChange={(e) => setPayoutCurrency(e.target.value)}
                       data-testid="payout-currency-input"
+                      className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="payoutDescription">Description (optional)</Label>
+                  <Label htmlFor="payoutDescription" className="dark:text-gray-300">Description (optional)</Label>
                   <Input
                     id="payoutDescription"
                     placeholder="Monthly payout"
                     value={payoutDescription}
                     onChange={(e) => setPayoutDescription(e.target.value)}
                     data-testid="payout-description-input"
+                    className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   />
                 </div>
                 <Button 
                   onClick={handleCreatePayout} 
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                  className="w-full bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:via-yellow-700 hover:to-yellow-800 text-black font-bold"
                   data-testid="create-payout-button"
                 >
                   {loading ? 'Creating...' : 'Create Payout'}
@@ -400,28 +469,28 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg border-0">
+            <Card className="shadow-lg border-0 dark:bg-gray-800 dark:border-gray-700">
               <CardHeader>
-                <CardTitle>Recent Payouts</CardTitle>
-                <CardDescription>View and manage your payout history</CardDescription>
+                <CardTitle className="dark:text-white">Recent Payouts</CardTitle>
+                <CardDescription className="dark:text-gray-400">View and manage your payout history</CardDescription>
               </CardHeader>
               <CardContent>
                 {payouts.length === 0 ? (
-                  <p className="text-center text-gray-500 py-8">No payouts found</p>
+                  <p className="text-center text-gray-500 dark:text-gray-400 py-8">No payouts found</p>
                 ) : (
                   <div className="space-y-4">
                     {payouts.map((payout) => (
-                      <div key={payout.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow" data-testid={`payout-${payout.id}`}>
+                      <div key={payout.id} className="border dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow dark:bg-gray-750" data-testid={`payout-${payout.id}`}>
                         <div className="flex justify-between items-start">
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2">
-                              <p className="font-semibold text-lg">
+                              <p className="font-semibold text-lg dark:text-white">
                                 ${payout.amount.toFixed(2)} {payout.currency.toUpperCase()}
                               </p>
                               {getStatusBadge(payout.status)}
                             </div>
-                            <p className="text-sm text-gray-600">{payout.description || 'No description'}</p>
-                            <div className="flex gap-4 mt-2 text-xs text-gray-500">
+                            <p className="text-sm text-gray-600 dark:text-gray-400">{payout.description || 'No description'}</p>
+                            <div className="flex gap-4 mt-2 text-xs text-gray-500 dark:text-gray-500">
                               <span>Arrival: {formatDate(payout.arrival_date)}</span>
                               <span>Created: {formatDate(payout.created)}</span>
                             </div>
@@ -448,15 +517,15 @@ const Home = () => {
 
           {/* Bank Accounts Tab */}
           <TabsContent value="bank-accounts" className="space-y-6">
-            <Card className="shadow-lg border-0">
+            <Card className="shadow-lg border-0 dark:bg-gray-800 dark:border-gray-700">
               <CardHeader>
-                <CardTitle>Add Bank Account</CardTitle>
-                <CardDescription>Add a new bank account for payouts</CardDescription>
+                <CardTitle className="dark:text-white">Add Bank Account</CardTitle>
+                <CardDescription className="dark:text-gray-400">Add a new bank account for payouts</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="accountNumber">Account Number</Label>
+                    <Label htmlFor="accountNumber" className="dark:text-gray-300">Account Number</Label>
                     <Input
                       id="accountNumber"
                       type="text"
@@ -464,10 +533,11 @@ const Home = () => {
                       value={accountNumber}
                       onChange={(e) => setAccountNumber(e.target.value)}
                       data-testid="account-number-input"
+                      className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="routingNumber">Routing Number</Label>
+                    <Label htmlFor="routingNumber" className="dark:text-gray-300">Routing Number</Label>
                     <Input
                       id="routingNumber"
                       type="text"
@@ -475,24 +545,26 @@ const Home = () => {
                       value={routingNumber}
                       onChange={(e) => setRoutingNumber(e.target.value)}
                       data-testid="routing-number-input"
+                      className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="accountHolderName">Account Holder Name</Label>
+                  <Label htmlFor="accountHolderName" className="dark:text-gray-300">Account Holder Name</Label>
                   <Input
                     id="accountHolderName"
                     placeholder="John Doe"
                     value={accountHolderName}
                     onChange={(e) => setAccountHolderName(e.target.value)}
                     data-testid="account-holder-name-input"
+                    className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="accountHolderType">Account Holder Type</Label>
+                  <Label htmlFor="accountHolderType" className="dark:text-gray-300">Account Holder Type</Label>
                   <select
                     id="accountHolderType"
-                    className="w-full px-3 py-2 border rounded-md"
+                    className="w-full px-3 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                     value={accountHolderType}
                     onChange={(e) => setAccountHolderType(e.target.value)}
                     data-testid="account-holder-type-select"
@@ -504,7 +576,7 @@ const Home = () => {
                 <Button 
                   onClick={handleAddBankAccount} 
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                  className="w-full bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:via-yellow-700 hover:to-yellow-800 text-black font-bold"
                   data-testid="add-bank-account-button"
                 >
                   {loading ? 'Adding...' : 'Add Bank Account'}
@@ -512,30 +584,30 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg border-0">
+            <Card className="shadow-lg border-0 dark:bg-gray-800 dark:border-gray-700">
               <CardHeader>
-                <CardTitle>Your Bank Accounts</CardTitle>
-                <CardDescription>Manage your connected bank accounts</CardDescription>
+                <CardTitle className="dark:text-white">Your Bank Accounts</CardTitle>
+                <CardDescription className="dark:text-gray-400">Manage your connected bank accounts</CardDescription>
               </CardHeader>
               <CardContent>
                 {bankAccounts.length === 0 ? (
-                  <p className="text-center text-gray-500 py-8">No bank accounts found</p>
+                  <p className="text-center text-gray-500 dark:text-gray-400 py-8">No bank accounts found</p>
                 ) : (
                   <div className="space-y-4">
                     {bankAccounts.map((account) => (
-                      <div key={account.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow" data-testid={`bank-account-${account.id}`}>
+                      <div key={account.id} className="border dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow dark:bg-gray-750" data-testid={`bank-account-${account.id}`}>
                         <div className="flex justify-between items-start">
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2">
-                              <p className="font-semibold text-lg">
+                              <p className="font-semibold text-lg dark:text-white">
                                 {account.bank_name || 'Bank Account'} ****{account.last4}
                               </p>
                               {account.default_for_currency && (
-                                <Badge className="bg-blue-100 text-blue-800">Default</Badge>
+                                <Badge className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Default</Badge>
                               )}
                               {getStatusBadge(account.status)}
                             </div>
-                            <div className="text-sm text-gray-600 space-y-1">
+                            <div className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
                               <p>Holder: {account.account_holder_name}</p>
                               <p>Country: {account.country} | Currency: {account.currency.toUpperCase()}</p>
                               {account.routing_number && <p>Routing: {account.routing_number}</p>}
@@ -549,6 +621,7 @@ const Home = () => {
                                 size="sm"
                                 disabled={loading}
                                 data-testid={`set-default-${account.id}`}
+                                className="dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
                               >
                                 Set Default
                               </Button>
@@ -575,21 +648,21 @@ const Home = () => {
           {/* Profile Tab */}
           <TabsContent value="profile" className="space-y-6">
             {account?.type === 'standard' && (
-              <Card className="shadow-lg border-0 bg-yellow-50 border-yellow-200">
+              <Card className="shadow-lg border-0 bg-yellow-50 border-yellow-200 dark:bg-yellow-900 dark:bg-opacity-20 dark:border-yellow-800">
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-yellow-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 text-yellow-600 dark:text-yellow-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                     <div>
-                      <p className="font-semibold text-yellow-800">Note for Standard Accounts</p>
-                      <p className="text-sm text-yellow-700 mt-1">
+                      <p className="font-semibold text-yellow-800 dark:text-yellow-400">Note for Standard Accounts</p>
+                      <p className="text-sm text-yellow-700 dark:text-yellow-300 mt-1">
                         Standard Stripe accounts cannot update business profiles via API. Please visit the{' '}
                         <a 
                           href="https://dashboard.stripe.com/settings/business" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="underline font-medium hover:text-yellow-900"
+                          className="underline font-medium hover:text-yellow-900 dark:hover:text-yellow-200"
                         >
                           Stripe Dashboard
                         </a> to update your business information.
@@ -600,24 +673,25 @@ const Home = () => {
               </Card>
             )}
             
-            <Card className="shadow-lg border-0">
+            <Card className="shadow-lg border-0 dark:bg-gray-800 dark:border-gray-700">
               <CardHeader>
-                <CardTitle>Update Business Profile</CardTitle>
-                <CardDescription>Update your business information {account?.type === 'standard' && '(Connect Accounts only)'}</CardDescription>
+                <CardTitle className="dark:text-white">Update Business Profile</CardTitle>
+                <CardDescription className="dark:text-gray-400">Update your business information {account?.type === 'standard' && '(Connect Accounts only)'}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="businessName">Business Name</Label>
+                  <Label htmlFor="businessName" className="dark:text-gray-300">Business Name</Label>
                   <Input
                     id="businessName"
                     placeholder="Acme Corporation"
                     value={businessName}
                     onChange={(e) => setBusinessName(e.target.value)}
                     data-testid="business-name-input"
+                    className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="businessUrl">Website URL</Label>
+                  <Label htmlFor="businessUrl" className="dark:text-gray-300">Website URL</Label>
                   <Input
                     id="businessUrl"
                     type="url"
@@ -625,10 +699,11 @@ const Home = () => {
                     value={businessUrl}
                     onChange={(e) => setBusinessUrl(e.target.value)}
                     data-testid="business-url-input"
+                    className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="supportPhone">Support Phone</Label>
+                  <Label htmlFor="supportPhone" className="dark:text-gray-300">Support Phone</Label>
                   <Input
                     id="supportPhone"
                     type="tel"
@@ -636,10 +711,11 @@ const Home = () => {
                     value={supportPhone}
                     onChange={(e) => setSupportPhone(e.target.value)}
                     data-testid="support-phone-input"
+                    className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="supportEmail">Support Email</Label>
+                  <Label htmlFor="supportEmail" className="dark:text-gray-300">Support Email</Label>
                   <Input
                     id="supportEmail"
                     type="email"
@@ -647,12 +723,13 @@ const Home = () => {
                     value={supportEmail}
                     onChange={(e) => setSupportEmail(e.target.value)}
                     data-testid="support-email-input"
+                    className="dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                   />
                 </div>
                 <Button 
                   onClick={handleUpdateProfile} 
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                  className="w-full bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:via-yellow-700 hover:to-yellow-800 text-black font-bold"
                   data-testid="update-profile-button"
                 >
                   {loading ? 'Updating...' : 'Update Profile'}
@@ -662,34 +739,34 @@ const Home = () => {
 
             {/* Current Profile Info */}
             {account?.business_profile && (
-              <Card className="shadow-lg border-0">
+              <Card className="shadow-lg border-0 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
-                  <CardTitle>Current Profile Information</CardTitle>
+                  <CardTitle className="dark:text-white">Current Profile Information</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     {account.business_profile.name && (
                       <div>
-                        <p className="text-sm text-gray-500">Business Name</p>
-                        <p className="font-semibold">{account.business_profile.name}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Business Name</p>
+                        <p className="font-semibold dark:text-white">{account.business_profile.name}</p>
                       </div>
                     )}
                     {account.business_profile.url && (
                       <div>
-                        <p className="text-sm text-gray-500">Website</p>
-                        <p className="font-semibold">{account.business_profile.url}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Website</p>
+                        <p className="font-semibold dark:text-white">{account.business_profile.url}</p>
                       </div>
                     )}
                     {account.business_profile.support_phone && (
                       <div>
-                        <p className="text-sm text-gray-500">Support Phone</p>
-                        <p className="font-semibold">{account.business_profile.support_phone}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Support Phone</p>
+                        <p className="font-semibold dark:text-white">{account.business_profile.support_phone}</p>
                       </div>
                     )}
                     {account.business_profile.support_email && (
                       <div>
-                        <p className="text-sm text-gray-500">Support Email</p>
-                        <p className="font-semibold">{account.business_profile.support_email}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Support Email</p>
+                        <p className="font-semibold dark:text-white">{account.business_profile.support_email}</p>
                       </div>
                     )}
                   </div>
