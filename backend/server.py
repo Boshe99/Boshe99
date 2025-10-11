@@ -96,14 +96,19 @@ async def get_account(authorization: str = Header(None)):
         stripe.api_key = api_key
         
         account = stripe.Account.retrieve()
+        
+        # Safely get attributes that might not exist
+        business_profile = getattr(account, 'business_profile', None)
+        requirements = getattr(account, 'requirements', None)
+        
         return {
             "id": account.id,
             "type": account.type,
-            "email": account.email if account.email else None,
-            "business_profile": dict(account.business_profile) if account.business_profile else {},
+            "email": getattr(account, 'email', None),
+            "business_profile": dict(business_profile) if business_profile else {},
             "charges_enabled": account.charges_enabled,
             "payouts_enabled": account.payouts_enabled,
-            "requirements": dict(account.requirements) if account.requirements else {},
+            "requirements": dict(requirements) if requirements else {},
             "country": account.country,
             "default_currency": account.default_currency,
         }
