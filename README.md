@@ -1,6 +1,13 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff00&height=200&section=header&text=D1337&fontSize=80&fontColor=00ff00&animation=fadeIn&fontAlignY=35&desc=%2Fdev%2Fnull+for+Kontol!&descAlignY=55&descSize=18"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff00&height=120&section=header"/>
+
+<!-- GLITCH TEXT D1337 -->
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=60&duration=150&pause=50&color=00FF00&center=true&vCenter=true&repeat=true&width=400&height=80&lines=D1337;D%C2%A7337;D!%C2%A337;%E2%96%881337;D13%E2%96%883%C2%A5;%C3%90%C2%A5%E2%96%88%E2%96%887;D1337;%E2%96%881%C2%A7%E2%96%887;D%C2%A5337;D1%E2%96%8837;D1337" />
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=100&pause=30&color=FF0000&center=true&vCenter=true&repeat=true&width=500&height=30&lines=%2Fdev%2Fnull+for+Kontol!;%2Fdev%2F%E2%96%88%E2%96%88ll+f%C3%B8r+K%C3%B8nt%C3%B8l!;%2Fdev%2Fnull+for+Kontol!;%2F%E2%96%88%E2%96%88v%2Fnull+f%C3%B8r+%E2%96%88%E2%96%88ntol!;%2Fdev%2Fnull+for+Kontol!" />
+
+<br>
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2000&pause=500&color=00FF00&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=%24+sudo+rm+-rf+%2Fscript_kiddie;segfault+di+otak+lu;git+push+--force+ur+life;%3A+q!+dari+hidup+gw+skid" />
 
