@@ -33,14 +33,36 @@
 <div align="center">
 
 ```bash
-$ cat /etc/shadow # lu gak bakal ngerti ini apaan
-root:*:19470:0:99999:7:::
+# === KERNEL EXPLOITATION ===
+$ cat /proc/kallsyms | grep commit_creds
+ffffffff81094a50 T commit_creds
+ffffffff81094b60 T prepare_kernel_cred
+
+$ ./pwn_kernel --bypass=SMEP,SMAP,KASLR --target=commit_creds
+[*] Leaking kernel base via /dev/mem...
+[*] KASLR slide: 0x1e00000
+[*] Building ROP chain for ret2usr...
+[+] Got root. ez.
+
+# === HEAP FENG SHUI ===
+$ gdb -q ./target -ex 'b *0x401337' -ex 'r < payload'
+(gdb) x/32gx $rsp
+0x7fffffffe000: 0x4141414141414141  0x4242424242424242
+0x7fffffffe010: 0x00007ffff7a52083  0xdeadbeefcafebabe
+(gdb) heap chunks
+[+] tcache[0x90]: 0x55555555a -> 0x55555555b -> 0x55555555c (corrupted)
+
+# === BINARY DIFFING ===
+$ radare2 -AA ./firmware.bin
+[0x08048000]> pdf @ sym.decrypt_key
+│ 0x08048000  push ebp
+│ 0x08048001  mov ebp, esp
+│ 0x08048003  xor eax, [ebp+0x8]      ; XOR key = 0xDEAD1337
+│ 0x08048009  rol eax, 0x0d           ; custom rotation
+└ 0x0804800c  ret
 
 $ whoami
-bukan bocil yg mass deface pake dorking
-
-$ file skid.brain
-skid.brain: empty, no magic number, probably corrupted since birth
+root (uid=0 gid=0) // spawned from kernel exploit, bukan sudo -s kek bocil
 ```
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=3000&pause=1000&color=FF0000&center=true&vCenter=true&width=500&lines=return+0;+%2F%2F+skill+lu;Exception:+BrainNotFoundException();kernel+panic+-+not+syncing:+skid+detected" />
