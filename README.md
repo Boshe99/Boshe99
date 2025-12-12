@@ -208,33 +208,15 @@ $ cat /behavior/skid.txt
 
 <div align="center">
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│  root@pwn:~/exploit$ vim kernel_pwn.c                                   │
-├─────────────────────────────────────────────────────────────────────────┤
-│  // CVE-2024-XXXX: Linux Kernel LPE via Use-After-Free in netfilter    │
-│                                                                         │
-│  #define KERNEL_BASE    0xffffffff81000000                              │
-│  #define COMMIT_CREDS   0x94a50                                         │
-│  #define PREPARE_CRED   0x94b60                                         │
-│                                                                         │
-│  unsigned long rop_chain[] = {                                          │
-│      POP_RDI_RET,                    // gadget 1                        │
-│      0x0,                            // rdi = 0 (init_cred)             │
-│      PREPARE_KERNEL_CRED,            // prepare_kernel_cred(0)          │
-│      POP_RCX_RET,                    // move rax to rdi                 │
-│      MOV_RDI_RAX_RET,                // rdi = new cred                  │
-│      COMMIT_CREDS,                   // commit_creds(new_cred)          │
-│      SWAPGS_RESTORE_REGS_IRETQ,      // return to userland              │
-│      (unsigned long)&spawn_shell,    // rip                             │
-│      USER_CS, USER_RFLAGS, USER_SP, USER_SS                             │
-│  };                                                                     │
-│                                                                         │
-│  :wq                                                                    │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=16&duration=40&pause=1000&color=00FF00&center=true&vCenter=true&repeat=true&width=750&height=40&lines=%24+vim+kernel_pwn.c+%2F%2F+writing+0day+exploit..." />
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=11&duration=50&pause=2000&color=00FF00&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=%24+gcc+-nostdlib+-static+-o+exploit+kernel_pwn.c;%24+.%2Fexploit;[*]+spraying+4096+msg_msg+structs...;[*]+triggering+UAF+in+nf_tables...;[%2B]+got+kernel+leak:+0xffffffff81094a50;[%2B]+SMEP%2FSMAP+bypassed+via+ret2dir;[%2B]+root+shell+spawned.+gg+ez." />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=30&pause=500&color=58A6FF&center=true&vCenter=true&repeat=true&width=750&height=35&lines=%23define+KERNEL_BASE+0xffffffff81000000;%23define+COMMIT_CREDS+0x94a50+%2F%2F+offset+from+%2Fproc%2Fkallsyms;%23define+PREPARE_KERNEL_CRED+0x94b60" />
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=25&pause=500&color=FF6B6B&center=true&vCenter=true&repeat=true&width=800&height=35&lines=unsigned+long+rop_chain%5B%5D+%3D+%7B+POP_RDI_RET%2C+0x0%2C+PREPARE_KERNEL_CRED+%7D;rop_chain%5B%5D+%3D+%7B+MOV_RDI_RAX%2C+COMMIT_CREDS%2C+SWAPGS_IRETQ+%7D;*(unsigned+long+*)%26rop_chain%5B7%5D+%3D+(unsigned+long)%26spawn_root_shell" />
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=13&duration=35&pause=800&color=FFFF00&center=true&vCenter=true&repeat=true&width=700&height=30&lines=%3Awq+%7C+gcc+-nostdlib+-static+kernel_pwn.c+-o+pwn+%26%26+.%2Fpwn" />
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&duration=45&pause=1500&color=00FF00&center=true&vCenter=true&repeat=true&width=750&height=100&lines=%5B*%5D+Spraying+4096+msg_msg+structs+for+heap+feng+shui...;%5B*%5D+Triggering+UAF+in+nf_tables+subsystem...;%5B*%5D+Leaking+KASLR+base:+0xffffffff81000000;%5B%2B%5D+SMEP%2FSMAP+bypassed+via+ret2dir+technique;%5B%2B%5D+ROP+chain+executed.+commit_creds(prepare_kernel_cred(0));%5B%2B%5D+uid%3D0(root)+gid%3D0(root)+--+pwned.+gg+ez+skid." />
 
 </div>
 
