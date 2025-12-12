@@ -1,21 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff00&height=200&section=header&text=BOSHE99&fontSize=80&fontColor=00ff00&animation=fadeIn&fontAlignY=35&desc=yg+baca+ini+script+kiddie&descAlignY=55&descSize=18"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff00&height=200&section=header&text=BOSHE99&fontSize=80&fontColor=00ff00&animation=fadeIn&fontAlignY=35&desc=%2Fdev%2Fnull+for+skiddies&descAlignY=55&descSize=18"/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2000&pause=500&color=00FF00&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=woy+script+kiddie;tool+nya+udh+di+download+blm%3F;run+python+aja+gatau+njir;balik+sono+belajar+print+hello+world" />
-
-</div>
-
----
-
-<div align="center">
-
-```
-gw males jelasin siapa gw
-yg jelas gw bukan bocil yg download tool github terus ngerasa heker
-```
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=3000&pause=1000&color=FF0000&center=true&vCenter=true&width=500&lines=kalo+lu+kesini+mau+minta+ajarin;close+tab+sekarang;gw+bukan+les+privat+lu" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2000&pause=500&color=00FF00&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=%24+sudo+rm+-rf+%2Fscript_kiddie;segfault+di+otak+lu;git+push+--force+ur+life;%3A+q!+dari+hidup+gw+skid" />
 
 </div>
 
@@ -23,15 +10,36 @@ yg jelas gw bukan bocil yg download tool github terus ngerasa heker
 
 <div align="center">
 
-## bedanya gw sama lu
+```bash
+$ cat /etc/shadow # lu gak bakal ngerti ini apaan
+root:*:19470:0:99999:7:::
 
+$ whoami
+bukan bocil yg mass deface pake dorking
+
+$ file skid.brain
+skid.brain: empty, no magic number, probably corrupted since birth
 ```
-gw:                                    lu:
-- nulis kode sendiri                   - ctrl c ctrl v stackoverflow
-- error? debug sendiri                 - error? ss ke grup "bang kok gini"
-- baca docs                            - "bang tutorial nya dong"
-- bikin tool sendiri                   - download tool orang, gak ngerti isinya
-- paham cara kerja                     - yg penting jalan
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=3000&pause=1000&color=FF0000&center=true&vCenter=true&width=500&lines=return+0;+%2F%2F+skill+lu;Exception:+BrainNotFoundException();kernel+panic+-+not+syncing:+skid+detected" />
+
+</div>
+
+---
+
+<div align="center">
+
+## `diff --git a/real_coder b/script_kiddie`
+
+```diff
++ nulis exploit sendiri mass               - download poc github run langsung
++ baca CVE detail sampe paham              - "CVE apaan bang?"
++ debug pake gdb sampe malem               - "kok segfault bang"
++ paham assembly buat ROP chain            - assembly? itu merk hp?
++ reverse engineering binary               - "cara decompile gimana bang"
++ bikin shellcode custom                   - msfvenom --payload copy paste
++ patch kernel buat privesc                - "sudo su kok gak bisa"
++ ASLR bypass, heap feng shui              - heap apaan? yg buat naruh barang?
 ```
 
 </div>
@@ -45,7 +53,7 @@ gw:                                    lu:
 
 <br>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=10&duration=2000&pause=500&color=888888&center=true&width=400&lines=itu+commit+asli+bukan+bot+kek+repo+lu" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=10&duration=2000&pause=500&color=888888&center=true&width=500&lines=commit+asli+anjing+bukan+github-readme-streak-stats+fake" />
 
 </div>
 
@@ -53,21 +61,23 @@ gw:                                    lu:
 
 <div align="center">
 
-## skill
+## `cat /proc/skill/maps`
 
 ```
-nulis kode        ████████████░░░░  legit
-copy paste        ██░░░░░░░░░░░░░░  males
-nanya di grup     ░░░░░░░░░░░░░░░░  gak pernah
-baca docs         ████████████████  wajib
-download tool     ░░░░░░░░░░░░░░░░  gak level
+Address           Perm   Skill                    Level
+0x00000000-0x1337 rwx    binary exploitation      ████████████░░ real
+0x1337-0x31337    rwx    reverse engineering      ███████████░░░ real
+0x31337-0x41414   rwx    kernel hacking           █████████░░░░░ real
+0xdeadbeef        ---    copy paste               ░░░░░░░░░░░░░░ gak guna
+0xcafebabe        ---    download tool            ░░░░░░░░░░░░░░ skid behavior
+0x41414141        ---    nanya di grup            ░░░░░░░░░░░░░░ /dev/null
 ```
 
-<img src="https://skillicons.dev/icons?i=python,js,bash,linux,docker,git,vscode,github&theme=dark" />
+<img src="https://skillicons.dev/icons?i=c,python,go,rust,bash,linux,docker,git&theme=dark" />
 
 <br>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=10&duration=1000&pause=500&color=888888&center=true&width=400&lines=bukan+pajangan+doang+kek+profile+script+kiddie" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=10&duration=1000&pause=500&color=888888&center=true&width=500&lines=lu+kenal+itu+logo+doang+apa+bisa+pake%3F;tau+bedanya+.so+sama+.a+gak%3F;ELF+header+kenal+gak%3F" />
 
 </div>
 
@@ -75,23 +85,41 @@ download tool     ░░░░░░░░░░░░░░░░  gak level
 
 <div align="center">
 
-## buat yg suka nanya goblok
+## `man skid_faq`
 
-```
-T: bang ajarin dong
-J: google ada, dokumentasi ada, otak dipake
+```c
+/*
+ * FAQ - Frequently Asked (stupid) Questions
+ * Author: orang yg capek ditanyain hal goblok
+ */
 
-T: kok error bang?
-J: baca error nya, disitu ada tulisan. lu buta?
+struct question {
+    char *tanya;
+    char *jawab;
+};
 
-T: tool hack fb ada gak?
-J: ada di mimpi lu
+struct question faq[] = {
+    {"bang ajarin dong",
+     "RTFM anjing. man pages ada, docs ada, google ada. otak dipake"},
 
-T: cara jadi hacker?
-J: BELAJAR. bukan download tool. BELAJAR.
+    {"kok segfault bang?",
+     "gdb ./binary, run, bt full. baca sendiri kontol"},
 
-T: minta source code nya dong
-J: BIKIN SENDIRI +62
+    {"cara bypass aslr gimana?",
+     "lu tau aslr apaan dulu gak? address space layout randomization.
+      ngerti gak? gak kan. sono belajar memory layout dulu"},
+
+    {"minta exploit nya dong",
+     "BIKIN SENDIRI GOBLOK. lu kira exploit tumbuh di pohon?"},
+
+    {"bang kok rc4 decrypt nya error?",
+     "key nya bener gak tolol? IV nya ada gak? padding udah bener?
+      atau jangan-jangan lu gak tau rc4 itu symmetric cipher?"},
+
+    {"cara decompile gimana?",
+     "ghidra gratis. ida ada crack. bina.re ada. tapi bohong gw
+      kalo lu bisa baca output nya WKWK"},
+};
 ```
 
 </div>
@@ -100,21 +128,25 @@ J: BIKIN SENDIRI +62
 
 <div align="center">
 
-## ciri ciri script kiddie
+## `grep -r "skid" /behavior`
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=1000&color=FFFF00&center=true&width=500&lines=cek+diri+lu+sendiri" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=1000&color=FFFF00&center=true&width=500&lines=lu+termasuk+gak%3F+jujur+sama+diri+sendiri" />
 
+```bash
+$ cat /behavior/skid.txt
+
+[x] download sqlmap langsung scan, gak ngerti cara kerja sql injection
+[x] pake metasploit doang, gak bisa bikin exploit manual
+[x] "bang hash ini crack dong" (padahal tinggal hashcat -m)
+[x] nanya payload reverse shell, padahal di revshells.com ada
+[x] deface web terus bangga, padahal cuma upload shell doang
+[x] koleksi 0day tapi gak ngerti cara pake
+[x] sok pake kali linux, terminal isinya apt install doang
+[x] fork repo orang, ganti nama, claim "my tool"
+[x] bilang "gw hacker" padahal ping aja pake cmd
 ```
-✓ koleksi tool banyak, skill 0
-✓ nanya "cara pake gimana" tiap hari
-✓ ss error ke grup minta bantuan
-✓ fork repo orang, ngaku hasil sendiri
-✓ gak ngerti isi code yg di download
-✓ "bang tutorial dong"
-✓ jalanin tool = merasa hacker
-```
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=2000&pause=1000&color=FF0000&center=true&width=600&lines=kalo+lu+ngerasa+kesindir;emang+lu+orangnya" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=2000&pause=1000&color=FF0000&center=true&width=600&lines=if+(kesindir)+%7B+emang_lu_orangnya();+%7D" />
 
 </div>
 
@@ -124,6 +156,8 @@ J: BIKIN SENDIRI +62
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Boshe99&bg_color=0a0a0a&color=00ff00&line=00ff00&point=ff0000&area=true&area_color=001100&hide_border=true" width="95%"/>
 
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=10&duration=2000&pause=500&color=888888&center=true&width=500&lines=contribution+graph+bukan+hasil+bot;tiap+ijo+itu+keringet+bukan+hasil+fork" />
+
 </div>
 
 ---
@@ -131,15 +165,16 @@ J: BIKIN SENDIRI +62
 <div align="center">
 
 ```
-┌────────────────────────────────────────────────────────┐
-│                                                        │
-│  now playing:                                          │
-│  "script kiddie anthem - ft. stackoverflow"            │
-│                                                        │
-│   advancement: ━━●━━━━━━━━━━━━━━━━━━ 0:02 / 3:00       │
-│               (skill nya cuma segitu)                  │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────┐
+│  $ mplayer ~/music/skid_anthem.mp3                             │
+│                                                                │
+│  ♪ now playing:                                                │
+│  "segfault_in_ur_brain.c" - compiled with mass warnings        │
+│                                                                │
+│   [█████░░░░░░░░░░░░░░░░░░░] 2% (skill level lu)              │
+│                                                                │
+│  compiler says: too many mass errors, mass give up             │
+└────────────────────────────────────────────────────────────────┘
 ```
 
 </div>
@@ -149,16 +184,16 @@ J: BIKIN SENDIRI +62
 <div align="center">
 
 <a href="https://boshe99.github.io">
-<img src="https://img.shields.io/badge/website-masuk+kalo+berani-00ff00?style=for-the-badge&labelColor=0a0a0a"/>
+<img src="https://img.shields.io/badge/website-0x41414141-00ff00?style=for-the-badge&labelColor=0a0a0a"/>
 </a>
 
 <br><br>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=12&duration=2000&pause=500&color=FF0000&center=true&width=500&lines=dm+nanya+ajarin+%3D+block;gw+bukan+guru+les+lu" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=12&duration=2000&pause=500&color=FF0000&center=true&width=600&lines=DM+nanya+%3D+%2Fdev%2Fnull;gw+bukan+stackoverflow+lu" />
 
 <br>
 
-<img src="https://komarev.com/ghpvc/?username=Boshe99&color=00ff00&style=flat-square&label=yg+kepo"/>
+<img src="https://komarev.com/ghpvc/?username=Boshe99&color=00ff00&style=flat-square&label=0x"/>
 
 </div>
 
@@ -166,15 +201,25 @@ J: BIKIN SENDIRI +62
 
 <div align="center">
 
-```
-intinya:
-download tool 1000 biji tetep aja goblok kalo gak paham
-mending belajar dari 0 daripada sok sokan pake tool orang
+```asm
+section .rodata
+    msg db "intinya:", 0xa
+        db "download tool 1000 biji = skill tetep 0", 0xa
+        db "run exploit tanpa ngerti = skid behavior", 0xa
+        db "nanya mulu gak mau baca = goblok permanen", 0xa
+        db "mending mass belajar dari 0 drpd jadi skid seumur hidup", 0xa
+        db 0xa
+        db "-- boshe99", 0xa
+        db "-- echo $? returns 0 for real coders only", 0
 
-- boshe99
+section .text
+    global _start
+_start:
+    ; write(1, msg, len)
+    ; kalo lu gak ngerti ini, fix skid
 ```
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=2000&pause=1000&color=00FF00&center=true&width=600&lines=yaudah+gitu+aja;mau+ngapain+lagi+disini;sono+belajar;atau+lanjut+jadi+script+kiddie+seumur+hidup" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=2000&pause=1000&color=00FF00&center=true&width=600&lines=exit(0);+%2F%2F+gw+cabut;return+NULL;+%2F%2F+kek+skill+lu;while(skid)+%7B+stay_goblok();+%7D" />
 
 <br>
 
