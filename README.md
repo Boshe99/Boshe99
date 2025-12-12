@@ -33,13 +33,15 @@
  ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
 ```
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&weight=900&size=45&duration=80&pause=20&color=00FF00&center=true&vCenter=true&repeat=true&width=350&height=60&lines=%E2%96%88%E2%96%93%E2%96%92%E2%96%91D1337%E2%96%91%E2%96%92%E2%96%93%E2%96%88;%E2%96%93D%E2%96%911%E2%96%923%E2%96%933%E2%96%887%E2%96%93;%E2%96%88D%E2%96%881%E2%96%933%E2%96%923%E2%96%917%E2%96%88;D%E2%96%91%E2%96%921%E2%96%933%E2%96%883%E2%96%917;%E2%96%92%E2%96%93D1%E2%96%883%E2%96%9137%E2%96%91%E2%96%92;D1337;%E2%96%91%E2%96%92%E2%96%93D1337%E2%96%93%E2%96%92%E2%96%91;%E2%96%88D%E2%96%931%E2%96%923%E2%96%9137%E2%96%88;D%E2%96%88%E2%96%931%E2%96%923%E2%96%9137;D1337" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&weight=900&size=45&duration=80&pause=20&color=00FF00&center=true&vCenter=true&repeat=true&width=350&height=60&lines=%E2%96%88%E2%96%93%E2%96%92%E2%96%91D1337%E2%96%91%E2%96%92%E2%96%93%E2%96%88;%E2%96%93D%E2%96%911%E2%96%923%E2%96%933%E2%96%887%E2%96%93;%E2%96%88D%E2%96%881%E2%96%933%E2%96%923%E2%96%917%E2%96%88;D%E2%96%91%E2%96%921%E2%96%933%E2%96%883%E2%96%917;%E2%96%92%E2%96%93D1%E2%96%883%E2%96%9137%E2%96%91%E2%96%92;D1337;%E2%96%91%E2%96%92%E2%96%93D1337%E2%96%93%E2%96%92%E2%96%91;%E2%96%88D%E2%96%931%E2%96%923%E2%96%9137%E2%96%88;D%E2%96%88%E2%96%931%E2%96%923%E2%96%9137;D1337" alt="D1337 Glitch"/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&size=20&duration=60&pause=10&color=FF0000&center=true&vCenter=true&repeat=true&width=450&height=30&lines=%E2%96%88%2Fdev%2Fnull+for+KONTOL!%E2%96%88;%2F%E2%96%93dev%E2%96%92%2Fnull+%E2%96%91for+KONT%E2%96%88L!;%2Fdev%2Fnull+for+KONTOL!;%E2%96%91%2Fdev%2F%E2%96%93null+for+K%E2%96%92NTOL!%E2%96%91;%2Fdev%2Fnull+for+KONTOL!" />
+<br/>
 
-<br>
+<img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&size=20&duration=60&pause=10&color=FF0000&center=true&vCenter=true&repeat=true&width=450&height=30&lines=%E2%96%88%2Fdev%2Fnull+for+KONTOL!%E2%96%88;%2F%E2%96%93dev%E2%96%92%2Fnull+%E2%96%91for+KONT%E2%96%88L!;%2Fdev%2Fnull+for+KONTOL!;%E2%96%91%2Fdev%2F%E2%96%93null+for+K%E2%96%92NTOL!%E2%96%91;%2Fdev%2Fnull+for+KONTOL!" alt="Tagline"/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2000&pause=500&color=00FF00&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=%24+sudo+rm+-rf+%2Fscript_kiddie;segfault+di+otak+lu;git+push+--force+ur+life;%3A+q!+dari+hidup+gw+skid" />
+<br/><br/>
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2000&pause=500&color=00FF00&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=%24+sudo+rm+-rf+%2Fscript_kiddie;segfault+di+otak+lu;git+push+--force+ur+life;%3A+q!+dari+hidup+gw+skid" alt="Commands"/>
 
 </div>
 
