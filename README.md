@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff00&height=200&section=header&text=BOSHE99&fontSize=80&fontColor=00ff00&animation=fadeIn&fontAlignY=35&desc=%2Fdev%2Fnull+for+skiddies&descAlignY=55&descSize=18"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff00&height=200&section=header&text=D1337&fontSize=80&fontColor=00ff00&animation=fadeIn&fontAlignY=35&desc=%2Fdev%2Fnull+for+Kontol!&descAlignY=55&descSize=18"/>
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2000&pause=500&color=00FF00&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=%24+sudo+rm+-rf+%2Fscript_kiddie;segfault+di+otak+lu;git+push+--force+ur+life;%3A+q!+dari+hidup+gw+skid" />
 
