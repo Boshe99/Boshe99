@@ -2,20 +2,35 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff00&height=100&section=header"/>
 
-<!-- GLITCH D1337 - LARGE -->
-<a href="https://github.com/Boshe99">
-<img src="https://img.shields.io/badge/-D1337-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48L3N2Zz4=&logoColor=00ff00&labelColor=000000" height="1"/>
-</a>
+<!-- BOOT SEQUENCE -->
+<img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&size=12&duration=30&pause=3000&color=00FF00&center=true&vCenter=true&repeat=true&width=500&height=25&lines=%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88+SYSTEM+BOOT+%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88" />
 
 ```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║   ██████╗  ██╗ ██████╗ ██████╗ ███████╗    ██████╗  ██████╗  ██████╗ ████████╗║
+║   ██╔══██╗███║ ╚════██╗╚════██╗╚════██║    ██╔══██╗██╔═══██╗██╔═══██╗╚══██╔══╝║
+║   ██║  ██║╚██║  █████╔╝ █████╔╝    ██╔╝    ██████╔╝██║   ██║██║   ██║   ██║   ║
+║   ██║  ██║ ██║  ╚═══██╗ ╚═══██╗   ██╔╝     ██╔══██╗██║   ██║██║   ██║   ██║   ║
+║   ██████╔╝ ██║ ██████╔╝██████╔╝   ██║      ██████╔╝╚██████╔╝╚██████╔╝   ██║   ║
+║   ╚═════╝  ╚═╝ ╚═════╝ ╚═════╝    ╚═╝      ╚═════╝  ╚═════╝  ╚═════╝    ╚═╝   ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+```
 
+<img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&size=14&duration=40&pause=500&color=00FF00&center=true&vCenter=true&repeat=true&width=650&height=30&lines=%5B%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%5D+100%25+LOADING+MONEYHUNTER.SYS" />
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&size=13&duration=35&pause=400&color=AAAAAA&center=true&vCenter=true&repeat=true&width=600&height=90&lines=%3E+Initializing+kernel+exploit+modules...+%5BOK%5D;%3E+Loading+ROP+gadgets+from+libc...+%5BOK%5D;%3E+Bypassing+ASLR%2FSMEP%2FSMAP...+%5BOK%5D;%3E+Injecting+shellcode+into+memory...+%5BOK%5D;%3E+Privilege+escalation+complete...+%5BROOT%5D" />
+
+<br>
+
+```
  ███╗   ███╗ ██████╗ ███╗   ██╗███████╗██╗   ██╗██╗  ██╗██╗   ██╗███╗   ██╗████████╗███████╗██████╗
  ████╗ ████║██╔═══██╗████╗  ██║██╔════╝╚██╗ ██╔╝██║  ██║██║   ██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
  ██╔████╔██║██║   ██║██╔██╗ ██║█████╗   ╚████╔╝ ███████║██║   ██║██╔██╗ ██║   ██║   █████╗  ██████╔╝
  ██║╚██╔╝██║██║   ██║██║╚██╗██║██╔══╝    ╚██╔╝  ██╔══██║██║   ██║██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗
  ██║ ╚═╝ ██║╚██████╔╝██║ ╚████║███████╗   ██║   ██║  ██║╚██████╔╝██║ ╚████║   ██║   ███████╗██║  ██║
  ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
-
 ```
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&weight=900&size=45&duration=80&pause=20&color=00FF00&center=true&vCenter=true&repeat=true&width=350&height=60&lines=%E2%96%88%E2%96%93%E2%96%92%E2%96%91D1337%E2%96%91%E2%96%92%E2%96%93%E2%96%88;%E2%96%93D%E2%96%911%E2%96%923%E2%96%933%E2%96%887%E2%96%93;%E2%96%88D%E2%96%881%E2%96%933%E2%96%923%E2%96%917%E2%96%88;D%E2%96%91%E2%96%921%E2%96%933%E2%96%883%E2%96%917;%E2%96%92%E2%96%93D1%E2%96%883%E2%96%9137%E2%96%91%E2%96%92;D1337;%E2%96%91%E2%96%92%E2%96%93D1337%E2%96%93%E2%96%92%E2%96%91;%E2%96%88D%E2%96%931%E2%96%923%E2%96%9137%E2%96%88;D%E2%96%88%E2%96%931%E2%96%923%E2%96%9137;D1337" />
