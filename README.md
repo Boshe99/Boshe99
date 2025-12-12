@@ -209,17 +209,32 @@ $ cat /behavior/skid.txt
 <div align="center">
 
 ```
-┌────────────────────────────────────────────────────────────────┐
-│  $ mplayer ~/music/skid_anthem.mp3                             │
-│                                                                │
-│  ♪ now playing:                                                │
-│  "segfault_in_ur_brain.c" - compiled with mass warnings        │
-│                                                                │
-│   [█████░░░░░░░░░░░░░░░░░░░] 2% (skill level lu)              │
-│                                                                │
-│  compiler says: too many mass errors, mass give up             │
-└────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│  root@pwn:~/exploit$ vim kernel_pwn.c                                   │
+├─────────────────────────────────────────────────────────────────────────┤
+│  // CVE-2024-XXXX: Linux Kernel LPE via Use-After-Free in netfilter    │
+│                                                                         │
+│  #define KERNEL_BASE    0xffffffff81000000                              │
+│  #define COMMIT_CREDS   0x94a50                                         │
+│  #define PREPARE_CRED   0x94b60                                         │
+│                                                                         │
+│  unsigned long rop_chain[] = {                                          │
+│      POP_RDI_RET,                    // gadget 1                        │
+│      0x0,                            // rdi = 0 (init_cred)             │
+│      PREPARE_KERNEL_CRED,            // prepare_kernel_cred(0)          │
+│      POP_RCX_RET,                    // move rax to rdi                 │
+│      MOV_RDI_RAX_RET,                // rdi = new cred                  │
+│      COMMIT_CREDS,                   // commit_creds(new_cred)          │
+│      SWAPGS_RESTORE_REGS_IRETQ,      // return to userland              │
+│      (unsigned long)&spawn_shell,    // rip                             │
+│      USER_CS, USER_RFLAGS, USER_SP, USER_SS                             │
+│  };                                                                     │
+│                                                                         │
+│  :wq                                                                    │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=11&duration=50&pause=2000&color=00FF00&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=%24+gcc+-nostdlib+-static+-o+exploit+kernel_pwn.c;%24+.%2Fexploit;[*]+spraying+4096+msg_msg+structs...;[*]+triggering+UAF+in+nf_tables...;[%2B]+got+kernel+leak:+0xffffffff81094a50;[%2B]+SMEP%2FSMAP+bypassed+via+ret2dir;[%2B]+root+shell+spawned.+gg+ez." />
 
 </div>
 
