@@ -1,11 +1,26 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff00&height=120&section=header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:003300,100:00ff00&height=100&section=header"/>
 
-<!-- GLITCH TEXT D1337 -->
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=60&duration=150&pause=50&color=00FF00&center=true&vCenter=true&repeat=true&width=400&height=80&lines=D1337;D%C2%A7337;D!%C2%A337;%E2%96%881337;D13%E2%96%883%C2%A5;%C3%90%C2%A5%E2%96%88%E2%96%887;D1337;%E2%96%881%C2%A7%E2%96%887;D%C2%A5337;D1%E2%96%8837;D1337" />
+<!-- GLITCH D1337 - LARGE -->
+<a href="https://github.com/Boshe99">
+<img src="https://img.shields.io/badge/-D1337-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48L3N2Zz4=&logoColor=00ff00&labelColor=000000" height="1"/>
+</a>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=100&pause=30&color=FF0000&center=true&vCenter=true&repeat=true&width=500&height=30&lines=%2Fdev%2Fnull+for+Kontol!;%2Fdev%2F%E2%96%88%E2%96%88ll+f%C3%B8r+K%C3%B8nt%C3%B8l!;%2Fdev%2Fnull+for+Kontol!;%2F%E2%96%88%E2%96%88v%2Fnull+f%C3%B8r+%E2%96%88%E2%96%88ntol!;%2Fdev%2Fnull+for+Kontol!" />
+```
+
+    ██████╗  ██╗ ██████╗  ██████╗ ███████╗
+    ██╔══██╗███║╚════██╗╚════██╗╚════██║
+    ██║  ██║╚██║ █████╔╝ █████╔╝    ██╔╝
+    ██║  ██║ ██║ ╚═══██╗ ╚═══██╗   ██╔╝
+    ██████╔╝ ██║██████╔╝██████╔╝   ██║
+    ╚═════╝  ╚═╝╚═════╝ ╚═════╝    ╚═╝
+
+```
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&weight=900&size=45&duration=80&pause=20&color=00FF00&center=true&vCenter=true&repeat=true&width=350&height=60&lines=%E2%96%88%E2%96%93%E2%96%92%E2%96%91D1337%E2%96%91%E2%96%92%E2%96%93%E2%96%88;%E2%96%93D%E2%96%911%E2%96%923%E2%96%933%E2%96%887%E2%96%93;%E2%96%88D%E2%96%881%E2%96%933%E2%96%923%E2%96%917%E2%96%88;D%E2%96%91%E2%96%921%E2%96%933%E2%96%883%E2%96%917;%E2%96%92%E2%96%93D1%E2%96%883%E2%96%9137%E2%96%91%E2%96%92;D1337;%E2%96%91%E2%96%92%E2%96%93D1337%E2%96%93%E2%96%92%E2%96%91;%E2%96%88D%E2%96%931%E2%96%923%E2%96%9137%E2%96%88;D%E2%96%88%E2%96%931%E2%96%923%E2%96%9137;D1337" />
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Share+Tech+Mono&size=20&duration=60&pause=10&color=FF0000&center=true&vCenter=true&repeat=true&width=450&height=30&lines=%E2%96%88%2Fdev%2Fnull+for+KONTOL!%E2%96%88;%2F%E2%96%93dev%E2%96%92%2Fnull+%E2%96%91for+KONT%E2%96%88L!;%2Fdev%2Fnull+for+KONTOL!;%E2%96%91%2Fdev%2F%E2%96%93null+for+K%E2%96%92NTOL!%E2%96%91;%2Fdev%2Fnull+for+KONTOL!" />
 
 <br>
 
